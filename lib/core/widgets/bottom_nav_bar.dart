@@ -1,67 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class AppBottomNavBar extends StatelessWidget {
-  const AppBottomNavBar({super.key});
+class AppBottomNavigation extends StatelessWidget {
+  // We need to know which tab is currently selected
+  final int currentIndex;
+
+  const AppBottomNavigation({
+    Key? key,
+    required this.currentIndex,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: false,
-      child: Container(
-        color: Color(0xfff6f6f3),
-        margin: const EdgeInsets.symmetric(horizontal: 12),
-        height: 72,
-        decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.95),
-          borderRadius: const BorderRadius.vertical(
-            top: Radius.circular(24),
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.08),
-              blurRadius: 20,
-              offset: const Offset(0, -6),
-            ),
-          ],
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: const Color(0xfff6f6f3),
+      currentIndex: currentIndex,
+      // Highlights the current tab
+      onTap: (index) => _onTap(index, context),
+      // When user taps a tab
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _NavIcon(icon: Icons.home, isActive: true),
-            _NavIcon(icon: Icons.credit_card),
-            Container(
-              height: 56,
-              width: 56,
-              decoration: const BoxDecoration(
-                color: Colors.black,
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(Icons.add, color: Colors.white),
-            ),
-            _NavIcon(icon: Icons.bar_chart),
-            _NavIcon(icon: Icons.person),
-          ],
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          label: 'Search',
         ),
-      ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.add),
+          label: 'Add',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: 'Profile',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.wallet),
+          label: 'Wallet',
+        )
+      ],
     );
   }
-}
 
-class _NavIcon extends StatelessWidget {
-  final IconData icon;
-  final bool isActive;
-
-  const _NavIcon({
-    required this.icon,
-    this.isActive = false,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Icon(
-      icon,
-      size: 26,
-      color: isActive ? Colors.black : Colors.grey,
-    );
+  // When a tab is tapped, navigate to that page
+  void _onTap(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        context.go('/dashboard');
+        break;
+      case 1:
+        context.go('/search');
+        break;
+      case 2:
+        context.go('/add');
+        break;
+      case 3:
+        context.go('/profile');
+        break;
+    }
   }
 }
