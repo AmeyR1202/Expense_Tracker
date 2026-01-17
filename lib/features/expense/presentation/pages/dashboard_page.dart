@@ -1,3 +1,4 @@
+import 'package:expense_tracker/features/expense/presentation/widgets/app_drawer.dart';
 import 'package:expense_tracker/features/expense/presentation/widgets/balance_card.dart';
 import 'package:expense_tracker/features/expense/presentation/widgets/home_header.dart';
 import 'package:expense_tracker/features/expense/presentation/widgets/transaction_tile.dart';
@@ -25,17 +26,13 @@ class _DashboardPageState extends State<DashboardPage> {
         final name = state.name;
         return Scaffold(
           backgroundColor: Color(0xfff6f6f3),
+          appBar: HomeHeader(userName: name),
+          endDrawer: const AppDrawer(),
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 children: [
-                  HomeHeader(
-                    userName: name,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
                   BalanceCard(
                     balance: 5000,
                     progress: 0.2,

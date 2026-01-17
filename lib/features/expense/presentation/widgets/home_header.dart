@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeHeader extends StatelessWidget {
+class HomeHeader extends StatelessWidget implements PreferredSizeWidget {
   final String userName;
 
   const HomeHeader({
@@ -9,29 +9,24 @@ class HomeHeader extends StatelessWidget {
   });
 
   @override
+  Size get preferredSize => const Size.fromHeight(60);
+
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: false,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Hi, ${userName}!",
-              style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600),
-            ),
-            SizedBox(height: 4),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.menu_open),
-              iconSize: 32,
-              color: Colors.black,
-            )
-          ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: AppBar(
+        centerTitle: false,
+        backgroundColor: const Color(0xfff6f6f3),
+        elevation: 0,
+        titleSpacing: 16,
+        title: Text(
+          "Hi, $userName!",
+          style: const TextStyle(
+            fontSize: 28,
+            color: Colors.black,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
     );
