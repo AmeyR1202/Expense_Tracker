@@ -11,10 +11,10 @@ class ScaffoldWithNav extends StatelessWidget {
   final int currentIndex;
 
   const ScaffoldWithNav({
-    Key? key,
+    super.key,
     required this.child, // The page content goes here
     required this.currentIndex, // Which tab is active
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

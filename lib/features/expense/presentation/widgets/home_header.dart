@@ -18,7 +18,7 @@ class HomeHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Hi, Amey!",
+              "Hi, ${userName}!",
               style: TextStyle(
                   fontSize: 32,
                   color: Colors.black,
