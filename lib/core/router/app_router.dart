@@ -14,6 +14,46 @@ import 'package:expense_tracker/features/expense/presentation/pages/dashboard_pa
 
 final GoRouter appRouter = GoRouter(
   initialLocation: '/splash',
+  errorBuilder: (context, state) {
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(
+                Icons.error_outline,
+                size: 64,
+                color: Colors.redAccent,
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Something went wrong',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                state.error?.toString() ?? 'Page not found',
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: Colors.grey),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () {
+                  context.go('/dashboard');
+                },
+                child: const Text('Go to Dashboard'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  },
   routes: [
     GoRoute(
       path: '/splash',
