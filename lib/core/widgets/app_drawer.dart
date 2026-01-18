@@ -2,6 +2,7 @@ import 'package:expense_tracker/features/user/presentation/bloc/bloc/user_bloc.d
 import 'package:expense_tracker/features/user/presentation/bloc/bloc/user_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -22,7 +23,6 @@ class AppDrawer extends StatelessWidget {
                   'Expense Tracker',
                   style: TextStyle(
                     fontSize: 24,
-                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
@@ -30,15 +30,13 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.dashboard),
               title: const Text('Dashboard'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () {},
             ),
             ListTile(
               leading: const Icon(Icons.receipt_long),
               title: const Text('Transactions'),
               onTap: () {
-                Navigator.pop(context);
+                context.go('/dashboard');
               },
             ),
             ListTile(
@@ -55,6 +53,7 @@ class AppDrawer extends StatelessWidget {
               ),
               onTap: () {
                 context.read<UserBloc>().add(UserLogoutRequested());
+                context.go('/splash');
               },
             ),
           ],
