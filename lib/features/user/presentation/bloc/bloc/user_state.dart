@@ -8,3 +8,8 @@ class UserAuthenticated extends UserState {
   final String name;
   UserAuthenticated(this.name);
 }
+
+class UserNameError extends UserState {
+  final String message;
+  UserNameError(this.message);
+}

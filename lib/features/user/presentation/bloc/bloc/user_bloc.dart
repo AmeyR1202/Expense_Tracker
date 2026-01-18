@@ -29,6 +29,12 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     UserSaveRequested event,
     Emitter<UserState> emit,
   ) async {
+    final name = event.name.trim();
+
+    if (name.isEmpty) {
+      emit(UserNameError('Name cannot be empty'));
+      return;
+    }
     await repository.saveUser(User(name: event.name));
     emit(UserAuthenticated(event.name));
   }
