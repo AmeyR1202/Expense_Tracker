@@ -1,3 +1,4 @@
+import 'package:expense_tracker/feature/expense/presentation/dashboard/dashboard_screen.dart';
 import 'package:expense_tracker/feature/expense/presentation/enter_name/enter_name_screen.dart';
 import 'package:expense_tracker/feature/expense/presentation/splash/splash_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -9,7 +10,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: '/dashboard',
       builder: (context, state) =>
-          const SplashScreen(), // change to dashboard page later
+          DashboardScreen(), // change to dashboard page later
     ),
     GoRoute(
       path: '/enter-name',
