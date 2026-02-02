@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp.router(
+        theme: ThemeData(fontFamily: 'Inter', useMaterial3: true),
         routerConfig: appRouter,
         debugShowCheckedModeBanner: false,
       ),
