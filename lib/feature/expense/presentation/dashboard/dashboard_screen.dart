@@ -1,7 +1,10 @@
+import 'package:expense_tracker/core/presentation/widgets/app_drawer.dart';
+import 'package:expense_tracker/core/presentation/widgets/greeting_app_bar.dart';
 import 'package:expense_tracker/core/state/status.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_bloc.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_event.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_state.dart';
+import 'package:expense_tracker/feature/expense/presentation/user/bloc/user_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,8 +25,13 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   Widget build(BuildContext context) {
+    final userName = context.select<UserBloc, String>(
+      (bloc) => bloc.state.user?.name ?? '',
+    );
     return Scaffold(
-      appBar: AppBar(title: const Text('Dashboard')),
+      appBar: GreetingAppBar(username: userName),
+      endDrawer: const AppDrawer(),
+
       body: BlocBuilder<DashboardBloc, DashboardState>(
         builder: (context, state) {
           if (state.status == Status.loading) {
