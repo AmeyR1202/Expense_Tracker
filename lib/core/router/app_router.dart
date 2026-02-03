@@ -38,5 +38,13 @@ final GoRouter appRouter = GoRouter(
       path: '/enter-name',
       builder: (context, state) => const EnterNameScreen(),
     ),
+    // GoRoute(
+    //   path: '/add-transaction',
+    //   builder: (context, state) => const AddTransactionPage(),
+    // ),
+    // GoRoute(
+    //   path: '/settings',
+    //   builder: (context, state) => const SettingsPage(),
+    // ),
   ],
 );

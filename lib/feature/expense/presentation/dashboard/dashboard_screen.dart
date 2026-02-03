@@ -4,12 +4,16 @@ import 'package:expense_tracker/core/state/status.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_bloc.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_event.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_state.dart';
+import 'package:expense_tracker/feature/expense/presentation/dashboard/navigation/dashboard_nav_item.dart';
+import 'package:expense_tracker/feature/expense/presentation/dashboard/navigation/dashboard_nav_mapper.dart';
 import 'package:expense_tracker/feature/expense/presentation/user/bloc/user_bloc.dart';
 import 'package:expense_tracker/feature/expense/presentation/widgets/balance_card.dart';
+import 'package:expense_tracker/feature/expense/presentation/widgets/dashboard_bottom_nav.dart';
 import 'package:expense_tracker/feature/expense/presentation/widgets/transaction_section_header.dart';
 import 'package:expense_tracker/feature/expense/presentation/widgets/transaction_stat_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -91,6 +95,20 @@ class _DashboardPageState extends State<DashboardPage> {
           return const SizedBox.shrink();
         },
       ),
+      bottomNavigationBar: DashboardBottomNav(
+        current: DashboardNavItem.home,
+        onItemSelected: (item) {
+          context.go(routeFromNavItem(item));
+        },
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.go(routeFromNavItem(DashboardNavItem.add));
+        },
+        child: const Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
