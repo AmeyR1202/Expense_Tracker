@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/domain/entities/category_type.dart';
+import 'package:expense_tracker/feature/expense/domain/entities/transaction_type.dart';
 import 'package:expense_tracker/feature/expense/domain/entities/monthly_summary_entity.dart';
 import 'package:expense_tracker/feature/expense/domain/repositories/category_repository.dart';
 import 'package:expense_tracker/feature/expense/domain/repositories/transaction_repository.dart';
@@ -25,9 +25,9 @@ class GetMonthlySummaryUsecase {
     for (final t in transactions) {
       final type = categoryTypeMap[t.categoryId];
 
-      if (type == CategoryType.income) {
+      if (type == TransactionType.income) {
         totalIncome += t.amount;
-      } else if (type == CategoryType.expense) {
+      } else if (type == TransactionType.expense) {
         totalExpense += t.amount;
       }
     }

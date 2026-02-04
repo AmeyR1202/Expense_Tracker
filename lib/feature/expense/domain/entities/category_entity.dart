@@ -1,9 +1,9 @@
-import 'package:expense_tracker/feature/expense/domain/entities/category_type.dart';
+import 'package:expense_tracker/feature/expense/domain/entities/transaction_type.dart';
 
 class CategoryEntity {
   final String categoryId;
   final String categoryName;
-  final CategoryType type;
+  final TransactionType type;
 
   CategoryEntity({
     required this.categoryId,
