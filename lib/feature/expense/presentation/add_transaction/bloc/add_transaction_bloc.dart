@@ -70,5 +70,16 @@ class AddTransactionBloc
 
   // NOTES / TransactionPage
 
-  void _onNotesEntered() {}
+  void _onNotesEntered(NotesEntered event, Emitter<AddTransactionState> emit) {
+    emit(state.copyWith(notes: event.notes));
+  }
+
+  // Submit
+
+  void _onTransactionSubmitted(
+    TransactionSubmitted event,
+    Emitter<AddTransactionState> emit,
+  ) {
+    emit(state.copyWith(step: AddTransactionStep.completed));
+  }
 }

@@ -17,8 +17,8 @@ class CategoryRepositoryImpl implements CategoryRepository {
             categoryId: c.id,
             categoryName: c.name,
             type: c.type == 'income'
-                ? CategoryType.income
-                : CategoryType.expense,
+                ? TransactionType.income
+                : TransactionType.expense,
           ),
         )
         .toList();
