@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/domain/entities/transaction_entity.dart';
+import 'package:spend_wise/feature/expense/domain/entities/transaction_entity.dart';
 
 abstract class TransactionRepository {
   Future<void> addTransaction(TransactionEntity transaction);

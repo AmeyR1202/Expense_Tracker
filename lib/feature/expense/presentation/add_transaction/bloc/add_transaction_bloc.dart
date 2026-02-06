@@ -1,6 +1,6 @@
-import 'package:expense_tracker/feature/expense/presentation/add_transaction/bloc/add_transaction_event.dart';
-import 'package:expense_tracker/feature/expense/presentation/add_transaction/bloc/add_transaction_state.dart';
-import 'package:expense_tracker/feature/expense/presentation/add_transaction/flow/add_transaction_step.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/bloc/add_transaction_event.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/bloc/add_transaction_state.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/flow/add_transaction_step.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddTransactionBloc

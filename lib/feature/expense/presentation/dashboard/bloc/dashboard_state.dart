@@ -1,5 +1,5 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/monthly_summary_entity.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/domain/entities/monthly_summary_entity.dart';
 
 class DashboardState {
   final Status status;

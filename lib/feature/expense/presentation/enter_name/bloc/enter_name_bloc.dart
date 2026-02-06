@@ -1,8 +1,8 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/user_entity.dart';
-import 'package:expense_tracker/feature/expense/domain/usecases/save_user_usecase.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/bloc/enter_name_event.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/bloc/enter_name_state.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/domain/entities/user_entity.dart';
+import 'package:spend_wise/feature/expense/domain/usecases/save_user_usecase.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/bloc/enter_name_event.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/bloc/enter_name_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class EnterNameBloc extends Bloc<EnterNameEvent, EnterNameState> {

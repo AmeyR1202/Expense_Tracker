@@ -1,7 +1,7 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/domain/usecases/get_user_usecase.dart';
-import 'package:expense_tracker/feature/expense/presentation/user/bloc/user_event.dart';
-import 'package:expense_tracker/feature/expense/presentation/user/bloc/user_state.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/domain/usecases/get_user_usecase.dart';
+import 'package:spend_wise/feature/expense/presentation/user/bloc/user_event.dart';
+import 'package:spend_wise/feature/expense/presentation/user/bloc/user_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {

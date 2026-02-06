@@ -1,15 +1,15 @@
-import 'package:expense_tracker/core/database/app_database_instance.dart';
-import 'package:expense_tracker/feature/expense/data/datasources/category_local_data_source.dart';
-import 'package:expense_tracker/feature/expense/data/datasources/transaction_local_data_source.dart';
-import 'package:expense_tracker/feature/expense/data/repositories/category_repository_impl.dart';
-import 'package:expense_tracker/feature/expense/data/repositories/transaction_repository_impl.dart';
-import 'package:expense_tracker/feature/expense/domain/usecases/get_monthly_summary_usecase.dart';
-import 'package:expense_tracker/feature/expense/presentation/add_transaction/bloc/add_transaction_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/add_transaction/pages/add_transaction_page.dart';
-import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/dashboard/dashboard_screen.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/enter_name_screen.dart';
-import 'package:expense_tracker/feature/expense/presentation/splash/splash_screen.dart';
+import 'package:spend_wise/core/database/app_database_instance.dart';
+import 'package:spend_wise/feature/expense/data/datasources/category_local_data_source.dart';
+import 'package:spend_wise/feature/expense/data/datasources/transaction_local_data_source.dart';
+import 'package:spend_wise/feature/expense/data/repositories/category_repository_impl.dart';
+import 'package:spend_wise/feature/expense/data/repositories/transaction_repository_impl.dart';
+import 'package:spend_wise/feature/expense/domain/usecases/get_monthly_summary_usecase.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/bloc/add_transaction_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/pages/add_transaction_page.dart';
+import 'package:spend_wise/feature/expense/presentation/dashboard/bloc/dashboard_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/dashboard/dashboard_screen.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/enter_name_screen.dart';
+import 'package:spend_wise/feature/expense/presentation/splash/splash_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

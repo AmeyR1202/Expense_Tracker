@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/presentation/dashboard/navigation/dashboard_nav_item.dart';
+import 'package:spend_wise/feature/expense/presentation/dashboard/navigation/dashboard_nav_item.dart';
 import 'package:flutter/material.dart';
 
 class DashboardBottomNav extends StatelessWidget {

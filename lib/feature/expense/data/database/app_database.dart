@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
-import 'package:expense_tracker/feature/expense/data/tables/categories_table.dart';
-import 'package:expense_tracker/feature/expense/data/tables/transactions_table.dart';
-import 'package:expense_tracker/feature/expense/data/tables/user_tables.dart';
+import 'package:spend_wise/feature/expense/data/tables/categories_table.dart';
+import 'package:spend_wise/feature/expense/data/tables/transactions_table.dart';
+import 'package:spend_wise/feature/expense/data/tables/user_tables.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 

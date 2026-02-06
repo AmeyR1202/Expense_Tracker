@@ -1,7 +1,7 @@
-import 'package:expense_tracker/feature/expense/data/datasources/category_local_data_source.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/category_entity.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/transaction_type.dart';
-import 'package:expense_tracker/feature/expense/domain/repositories/category_repository.dart';
+import 'package:spend_wise/feature/expense/data/datasources/category_local_data_source.dart';
+import 'package:spend_wise/feature/expense/domain/entities/category_entity.dart';
+import 'package:spend_wise/feature/expense/domain/entities/transaction_type.dart';
+import 'package:spend_wise/feature/expense/domain/repositories/category_repository.dart';
 
 class CategoryRepositoryImpl implements CategoryRepository {
   final CategoryLocalDataSource localDataSource;

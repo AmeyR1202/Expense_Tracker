@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/domain/entities/user_entity.dart';
+import 'package:spend_wise/feature/expense/domain/entities/user_entity.dart';
 
 abstract class UserRepository {
   Future<UserEntity?> getUser();

@@ -1,6 +1,6 @@
-import 'package:expense_tracker/feature/expense/data/datasources/transaction_local_data_source.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/transaction_entity.dart';
-import 'package:expense_tracker/feature/expense/domain/repositories/transaction_repository.dart';
+import 'package:spend_wise/feature/expense/data/datasources/transaction_local_data_source.dart';
+import 'package:spend_wise/feature/expense/domain/entities/transaction_entity.dart';
+import 'package:spend_wise/feature/expense/domain/repositories/transaction_repository.dart';
 
 class TransactionRepositoryImpl implements TransactionRepository {
   final TransactionLocalDataSource localDataSource;

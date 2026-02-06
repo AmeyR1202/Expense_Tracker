@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/domain/entities/transaction_type.dart';
+import 'package:spend_wise/feature/expense/domain/entities/transaction_type.dart';
 
 class CategoryEntity {
   final String categoryId;

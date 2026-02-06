@@ -1,5 +1,5 @@
-name: expense_tracker
-description: "A new Flutter project."
+name: "spend_wise"
+description: "A very good project by a good developer."
 
 publish_to: "none"
 
@@ -27,6 +27,7 @@ dev_dependencies:
   flutter_lints: ^6.0.0
   drift_dev: ^2.15.0
   build_runner: ^2.4.6
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -37,3 +38,8 @@ flutter:
         - asset: assets/fonts/Inter-Variable.ttf
         - asset: assets/fonts/Inter-Italic-Variable.ttf
           style: italic
+
+flutter_launcher_icons:
+  ios: true
+  android: true
+  image_path: "assets/icon/spend_wise.png"

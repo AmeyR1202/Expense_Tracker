@@ -1,7 +1,7 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/bloc/enter_name_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/bloc/enter_name_event.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/bloc/enter_name_state.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/bloc/enter_name_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/bloc/enter_name_event.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/bloc/enter_name_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -67,3 +67,25 @@ class EnterNameScreen extends StatelessWidget {
     );
   }
 }
+
+// class EnterNameScreen extends StatelessWidget {
+//   const EnterNameScreen({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocListener<EnterNameBloc, EnterNameState>(
+//       listenWhen: (previous, current) => previous.status != current.status,
+//       listener: (context, state) {
+//         if (state.status == Status.success) {
+//           context.go('/dashboard');
+//         }
+//         if (state.status == Status.error && state.errorMessage != null) {
+//           ScaffoldMessenger.of(
+//             context,
+//           ).showSnackBar(SnackBar(content: Text(state.errorMessage!)));
+//         }
+//       },
+//       child: Scaffold(),
+//     );
+//   }
+// }

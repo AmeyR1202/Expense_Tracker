@@ -1,4 +1,4 @@
-import 'package:expense_tracker/core/state/status.dart';
+import 'package:spend_wise/core/state/status.dart';
 
 class SplashState {
   final Status status;

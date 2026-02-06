@@ -1,7 +1,7 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/presentation/splash/bloc/splash_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/splash/bloc/splash_event.dart';
-import 'package:expense_tracker/feature/expense/presentation/splash/bloc/splash_state.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/presentation/splash/bloc/splash_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/splash/bloc/splash_event.dart';
+import 'package:spend_wise/feature/expense/presentation/splash/bloc/splash_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

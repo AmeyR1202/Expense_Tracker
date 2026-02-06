@@ -1,7 +1,7 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/domain/usecases/get_monthly_summary_usecase.dart';
-import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_event.dart';
-import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_state.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/domain/usecases/get_monthly_summary_usecase.dart';
+import 'package:spend_wise/feature/expense/presentation/dashboard/bloc/dashboard_event.dart';
+import 'package:spend_wise/feature/expense/presentation/dashboard/bloc/dashboard_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {

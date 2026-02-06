@@ -1,15 +1,15 @@
-import 'package:expense_tracker/core/database/app_database_instance.dart';
-import 'package:expense_tracker/core/router/app_router.dart';
-import 'package:expense_tracker/feature/expense/data/datasources/user_local_data_source.dart';
-import 'package:expense_tracker/feature/expense/data/repositories/user_repository_impl.dart';
-import 'package:expense_tracker/feature/expense/domain/usecases/get_user_usecase.dart';
-import 'package:expense_tracker/feature/expense/domain/usecases/save_user_usecase.dart';
-import 'package:expense_tracker/feature/expense/presentation/enter_name/bloc/enter_name_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/splash/bloc/splash_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/user/bloc/user_bloc.dart';
-import 'package:expense_tracker/feature/expense/presentation/user/bloc/user_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spend_wise/core/database/app_database_instance.dart';
+import 'package:spend_wise/core/router/app_router.dart';
+import 'package:spend_wise/feature/expense/data/datasources/user_local_data_source.dart';
+import 'package:spend_wise/feature/expense/data/repositories/user_repository_impl.dart';
+import 'package:spend_wise/feature/expense/domain/usecases/get_user_usecase.dart';
+import 'package:spend_wise/feature/expense/domain/usecases/save_user_usecase.dart';
+import 'package:spend_wise/feature/expense/presentation/enter_name/bloc/enter_name_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/splash/bloc/splash_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/user/bloc/user_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/user/bloc/user_event.dart';
 
 void main() {
   runApp(const MyApp());

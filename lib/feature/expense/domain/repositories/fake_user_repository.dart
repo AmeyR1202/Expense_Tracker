@@ -1,5 +1,5 @@
-import 'package:expense_tracker/feature/expense/domain/entities/user_entity.dart';
-import 'package:expense_tracker/feature/expense/domain/repositories/user_repository.dart';
+import 'package:spend_wise/feature/expense/domain/entities/user_entity.dart';
+import 'package:spend_wise/feature/expense/domain/repositories/user_repository.dart';
 
 class FakeUserRepository implements UserRepository {
   @override

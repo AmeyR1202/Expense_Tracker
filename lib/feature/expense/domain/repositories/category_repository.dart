@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/domain/entities/category_entity.dart';
+import 'package:spend_wise/feature/expense/domain/entities/category_entity.dart';
 
 abstract class CategoryRepository {
   Future<List<CategoryEntity>> getCategories();

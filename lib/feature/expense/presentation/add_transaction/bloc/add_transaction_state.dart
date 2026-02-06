@@ -1,7 +1,7 @@
-import 'package:expense_tracker/core/state/status.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/category_entity.dart';
-import 'package:expense_tracker/feature/expense/domain/entities/transaction_type.dart';
-import 'package:expense_tracker/feature/expense/presentation/add_transaction/flow/add_transaction_step.dart';
+import 'package:spend_wise/core/state/status.dart';
+import 'package:spend_wise/feature/expense/domain/entities/category_entity.dart';
+import 'package:spend_wise/feature/expense/domain/entities/transaction_type.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/flow/add_transaction_step.dart';
 
 class AddTransactionState {
   final AddTransactionStep step;

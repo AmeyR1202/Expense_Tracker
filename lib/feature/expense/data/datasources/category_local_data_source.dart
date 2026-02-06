@@ -1,4 +1,4 @@
-import 'package:expense_tracker/feature/expense/data/database/app_database.dart';
+import 'package:spend_wise/feature/expense/data/database/app_database.dart';
 
 class CategoryLocalDataSource {
   final AppDatabase database;
