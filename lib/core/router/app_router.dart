@@ -4,6 +4,8 @@ import 'package:expense_tracker/feature/expense/data/datasources/transaction_loc
 import 'package:expense_tracker/feature/expense/data/repositories/category_repository_impl.dart';
 import 'package:expense_tracker/feature/expense/data/repositories/transaction_repository_impl.dart';
 import 'package:expense_tracker/feature/expense/domain/usecases/get_monthly_summary_usecase.dart';
+import 'package:expense_tracker/feature/expense/presentation/add_transaction/bloc/add_transaction_bloc.dart';
+import 'package:expense_tracker/feature/expense/presentation/add_transaction/pages/add_transaction_page.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/bloc/dashboard_bloc.dart';
 import 'package:expense_tracker/feature/expense/presentation/dashboard/dashboard_screen.dart';
 import 'package:expense_tracker/feature/expense/presentation/enter_name/enter_name_screen.dart';
@@ -38,10 +40,16 @@ final GoRouter appRouter = GoRouter(
       path: '/enter-name',
       builder: (context, state) => const EnterNameScreen(),
     ),
-    // GoRoute(
-    //   path: '/add-transaction',
-    //   builder: (context, state) => const AddTransactionPage(),
-    // ),
+    GoRoute(
+      path: '/add-transaction',
+      builder: (context, state) {
+        return BlocProvider(
+          create: (_) => AddTransactionBloc(),
+          child: const AddTransactionPage(),
+        );
+      },
+    ),
+
     // GoRoute(
     //   path: '/settings',
     //   builder: (context, state) => const SettingsPage(),
