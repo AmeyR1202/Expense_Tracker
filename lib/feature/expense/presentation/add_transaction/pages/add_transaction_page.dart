@@ -1,9 +1,11 @@
+import 'package:spend_wise/feature/expense/domain/entities/transaction_type.dart';
 import 'package:spend_wise/feature/expense/presentation/add_transaction/bloc/add_transaction_bloc.dart';
 import 'package:spend_wise/feature/expense/presentation/add_transaction/bloc/add_transaction_event.dart';
 import 'package:spend_wise/feature/expense/presentation/add_transaction/bloc/add_transaction_state.dart';
 import 'package:spend_wise/feature/expense/presentation/add_transaction/flow/add_transaction_step.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spend_wise/feature/expense/presentation/add_transaction/sheets/type_selection_sheet.dart';
 
 class AddTransactionPage extends StatefulWidget {
   const AddTransactionPage({super.key});
@@ -40,11 +42,22 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
   void _handleStep(BuildContext context, AddTransactionStep step) {
     switch (step) {
       case AddTransactionStep.chooseType:
-        if (!_typeSheetShown) {
-          _typeSheetShown = true;
-          _showTypeSheet(context);
-        }
-        break;
+        if (!_typeSheetShown) _typeSheetShown = true;
+        showTypeSelectionSheet(
+          context: context,
+          onExpenseTap: () {
+            Navigator.pop(context);
+            context.read<AddTransactionBloc>().add(
+              TransactionTypeSelected(TransactionType.expense),
+            );
+          },
+          onIncomeTap: () {
+            Navigator.pop(context);
+            context.read<AddTransactionBloc>().add(
+              TransactionTypeSelected(TransactionType.income),
+            );
+          },
+        );
 
       case AddTransactionStep.enterAmount:
         _showAmountSheet(context);
@@ -62,22 +75,6 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
         Navigator.of(context).pop();
         break;
     }
-  }
-
-  void _showTypeSheet(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted) return;
-
-      showModalBottomSheet(
-        context: context,
-        useRootNavigator: true,
-        isDismissible: true,
-        builder: (_) => const SizedBox(
-          height: 200,
-          child: Center(child: Text('TYPE SHEET')),
-        ),
-      );
-    });
   }
 
   void _showAmountSheet(BuildContext context) {
